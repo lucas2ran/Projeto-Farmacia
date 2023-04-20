@@ -27,12 +27,12 @@ public class Produto {
 	private Long id;
 	
 	@NotBlank(message = "O nome do produto é obrigatorio!")
-	@Size(min = 5, max = 255, message = "O atributo descrição deve conter no mínimo 05 e no máximo 255 caracteres")
+	@Size(min = 5, max = 255, message = "O atributo nome deve conter no mínimo 05 e no máximo 255 caracteres")
 	private String nome;
 	
 	@NotBlank(message = "O valor do produto é obrigatório!")
-	@Size(min = 5, max = 1000, message = "O atributo tipo deve conter no mínimo 05 e no máximo 1000 caracteres")
-	private String tipo;
+	@Size(min = 5, max = 1000, message = "O atributo descrição deve conter no mínimo 05 e no máximo 1000 caracteres")
+	private String descricao;
 	
 	@NotNull(message = "O preço é obrigatório!")
     @DecimalMin(value = "0.01", message = "O atributo 'preço do produto' deve ser um número decimal positivo, a partir de R$ 0.01 !")
@@ -61,12 +61,12 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public BigDecimal getPreco() {
